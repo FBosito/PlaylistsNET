@@ -158,7 +158,7 @@ namespace PlaylistsNET.Content
 				}
 
 				currentEntry.Path =  currentLine;
-                currentEntry.PathEncoded = WebUtility.UrlDecode(currentLine);
+                currentEntry.PathDecoded = WebUtility.UrlDecode(currentLine);
                 playlist.PlaylistEntries.Add(currentEntry);
 				currentEntry = new M3uPlaylistEntry();
 				currentEntry.Album = "";
