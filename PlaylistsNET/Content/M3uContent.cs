@@ -157,8 +157,9 @@ namespace PlaylistsNET.Content
 					continue;
 				}
 
-				currentEntry.Path = WebUtility.UrlDecode(currentLine);
-				playlist.PlaylistEntries.Add(currentEntry);
+				currentEntry.Path =  currentLine;
+                currentEntry.PathEncoded = WebUtility.UrlDecode(currentLine);
+                playlist.PlaylistEntries.Add(currentEntry);
 				currentEntry = new M3uPlaylistEntry();
 				currentEntry.Album = "";
 				currentEntry.AlbumArtist = "";
